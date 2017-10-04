@@ -1,0 +1,10 @@
+version: '2'
+services:
+  hentai:
+    container_name: hentai
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/myapp/src
+    command: /bin/sh -c "tsc && node .dist/app.js"
